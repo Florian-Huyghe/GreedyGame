@@ -24,18 +24,18 @@ export default class Greedy {
     }
   
     moveLeft() {              
-        this.deltaX = this.deltaX - 5;   // le déplacement se fera vers la gauche, par pas de 10px
+        this.deltaX = this.deltaX - 2;   // le déplacement se fera vers la gauche, par pas de 10px
      }
      moveRight() {
-        this.deltaX = this.deltaX + 5;   // le déplacement se fera vers la droite, par pas de 10px
+        this.deltaX = this.deltaX + 2;   // le déplacement se fera vers la droite, par pas de 10px
      }
   
      moveUp() {
-      this.deltaY = this.deltaY - 5;   
+      this.deltaY = this.deltaY - 2;   
    }
   
    moveDown() {
-    this.deltaY = this.deltaY + 5;   
+    this.deltaY = this.deltaY + 2;   
   }
      stopMoving() {
         this.deltaX = 0;
@@ -66,19 +66,19 @@ export default class Greedy {
     }
   
     moveUp() {
-      this.y -= 5;
+      this.y -= 2;
     }
   
     moveDown() {
-      this.y += 5;
+      this.y += 2;
     }
   
     moveLeft() {
-      this.x -= 5;
+      this.x -= 2;
     }
   
     moveRight() {
-      this.x += 5;
+      this.x += 2;
     }
   }
   
