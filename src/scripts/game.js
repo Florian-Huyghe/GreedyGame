@@ -96,7 +96,10 @@ export default class Game {
             button.textContent = 'Start';
             clearInterval(this.fruitsInterval);
             clearInterval(this.updateFruitsInterval);
+
+            
         } else {
+            
             this.animate();
             button.textContent = 'Stop';
             
@@ -206,8 +209,9 @@ updateGreedyLife() {
                 this.greedy.loseLife();
             }else{
                 life1.remove();
+                button.remove();
                 this.greedy.loseLife();
-
+                
                 const pos = this.#hungries.indexOf(hungry);
                 this.#hungries.splice(pos,1);
                 
@@ -217,6 +221,7 @@ updateGreedyLife() {
             }
             if(this.greedy.lives == 0){
                 gameOver.style.display = "flex";
+                
             }
             this.createHungry();
 

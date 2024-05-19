@@ -11,5 +11,3 @@ const init = () => {
 
 window.addEventListener("load", init);
 
-
-console.log('le bundle a été généré');
