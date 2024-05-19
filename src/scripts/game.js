@@ -84,13 +84,13 @@ export default class Game {
                     this.#cpt++;
                 }
                 if(this.#cpt == 7 && this.#cpt != 0){
-                    //this.createHungry();
+                    this.createHungry();
                     this.#cpt = 0;
                 }
             }
         }
 
-        //this.moveHungries();
+        this.moveHungries();
         
 
         this.animationRequest = requestAnimationFrame(animateFrame);
