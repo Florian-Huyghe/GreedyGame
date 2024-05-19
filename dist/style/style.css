@@ -14,6 +14,9 @@ body {
 
 
 #touch-controls {
+   -webkit-user-select: none; /* Safari */
+   -ms-user-select: none; /* IE 10 and IE 11 */
+   user-select: none; /* Standard syntax */
   display: none;
   margin-top: 100px;
   justify-content: center;
@@ -21,12 +24,18 @@ body {
 }
 
 .vertical-controls {
+   -webkit-user-select: none; /* Safari */
+   -ms-user-select: none; /* IE 10 and IE 11 */
+   user-select: none; /* Standard syntax */
   display: flex;
   flex-direction: column;
   gap: 100px;
 }
 
 .control-btn {
+   -webkit-user-select: none; /* Safari */
+   -ms-user-select: none; /* IE 10 and IE 11 */
+   user-select: none; /* Standard syntax */
   background-color: #ff5733;
   color: white;
   padding: 10px;
@@ -99,9 +108,7 @@ p {
 }
 
 button {
-   -webkit-user-select: none; /* Safari */
-   -ms-user-select: none; /* IE 10 and IE 11 */
-   user-select: none; /* Standard syntax */
+
    background-color: #ff5733;
    color: white;
    padding: 10px 20px;
