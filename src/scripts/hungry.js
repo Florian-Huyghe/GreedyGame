@@ -9,7 +9,6 @@ export default class Hungry {
       this.width = 48;
       this.height = 48;
       this.image = this.#createImage(imageSrc);
-      this.lives = 3;
       this.score = 0;
     }
   

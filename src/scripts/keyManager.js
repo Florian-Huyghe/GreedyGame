@@ -15,6 +15,7 @@ export default class KeyManager {
       this.#right = false;
       this.#up = false;
       this.#down = false;
+      
    }
    /* accessor for left key, true when pressed  */
    get left() {

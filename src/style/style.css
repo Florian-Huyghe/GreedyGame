@@ -5,12 +5,44 @@ body {
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   height: 100vh;
+   min-height: 100vh;
    background-color: #d5f5e3;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    color: #3c3c3c;
    margin: 0;
 }
+
+
+#touch-controls {
+  display: none;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.control-btn {
+  background-color: #ff5733;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.control-btn:active {
+  background-color: #c70039;
+}
+
 
 h2 {
    text-align: center;
@@ -135,7 +167,11 @@ button:hover {
    flex-direction: column;
    margin-left: 10px;
 }
-
+@media (max-width: 1440px) {
+  #touch-controls {
+    display: flex;
+  }
+}
 @media (max-width: 768px) {
    #game {
       width: 100%;

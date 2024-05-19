@@ -9,6 +9,10 @@ const life1 = document.getElementById('life-1');
 const life2 = document.getElementById('life-2');
 const life3 = document.getElementById('life-3');
 const gameOver = document.getElementById('game-over');
+const moveLeftBtn = document.getElementById('left');
+const moveRightBtn = document.getElementById('right');
+const moveUpBtn = document.getElementById('up');
+const moveDownBtn = document.getElementById('down');
 
 export default class Game {
 
@@ -19,19 +23,31 @@ export default class Game {
    #cpt = 0;
 
    constructor(canvas) {
-      this.#canvas = canvas;
-      this.context = canvas.getContext('2d');
-      this.animationRequest = null;
-      this.greedy = new Greedy(canvas.width/2, canvas.height/2);
-      this.keyManager = new KeyManager();
-      this.#fruits = [];
-      this.#cpt;
+        this.#canvas = canvas;
+        this.context = canvas.getContext('2d');
+        this.animationRequest = null;
+        this.greedy = new Greedy(canvas.width/2, canvas.height/2);
+        this.keyManager = new KeyManager();
+        this.#fruits = [];
+        this.#cpt;
 
-      this.createHungry();
+        this.createHungry();
 
-      window.addEventListener('keydown', this.keyDownActionHandler.bind(this));
-      window.addEventListener('keyup', this.keyUpActionHandler.bind(this));
-      button.addEventListener("click", () => this.startAndStop()  );
+
+
+        // Ajoutez des gestionnaires d'événements pour les clics sur les boutons
+        moveLeftBtn.addEventListener('mousedown', () => this.keyManager.leftPressed());
+        moveLeftBtn.addEventListener('mouseup', () => this.keyManager.leftReleased());
+        moveRightBtn.addEventListener('mousedown', () => this.keyManager.rightPressed());
+        moveRightBtn.addEventListener('mouseup', () => this.keyManager.rightReleased());
+        moveUpBtn.addEventListener('mousedown', () => this.keyManager.upPressed());
+        moveUpBtn.addEventListener('mouseup', () => this.keyManager.upReleased());
+        moveDownBtn.addEventListener('mousedown', () => this.keyManager.downPressed());
+        moveDownBtn.addEventListener('mouseup', () => this.keyManager.downReleased());
+
+        window.addEventListener('keydown', this.keyDownActionHandler.bind(this));
+        window.addEventListener('keyup', this.keyUpActionHandler.bind(this));
+        button.addEventListener("click", () => this.startAndStop()  );
       
     }
 
@@ -67,14 +83,14 @@ export default class Game {
                     fruit.hide();
                     this.#cpt++;
                 }
-                if(this.#cpt%7 == 0 && this.#cpt != 0){
-                    this.createHungry();
+                if(this.#cpt == 7 && this.#cpt != 0){
+                    //this.createHungry();
                     this.#cpt = 0;
                 }
             }
         }
 
-        this.moveHungries();
+        //this.moveHungries();
         
 
         this.animationRequest = requestAnimationFrame(animateFrame);

@@ -12,6 +12,40 @@ body {
    margin: 0;
 }
 
+
+#touch-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-controls {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.control-btn {
+  background-color: #ff5733;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.control-btn:active {
+  background-color: #c70039;
+}
+
 h2 {
    text-align: center;
    color: green;
