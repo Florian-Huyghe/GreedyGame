@@ -36,14 +36,14 @@ export default class Game {
 
 
         // Ajoutez des gestionnaires d'événements pour les clics sur les boutons
-        moveLeftBtn.addEventListener('mousedown', () => this.keyManager.leftPressed());
-        moveLeftBtn.addEventListener('mouseup', () => this.keyManager.leftReleased());
-        moveRightBtn.addEventListener('mousedown', () => this.keyManager.rightPressed());
-        moveRightBtn.addEventListener('mouseup', () => this.keyManager.rightReleased());
-        moveUpBtn.addEventListener('mousedown', () => this.keyManager.upPressed());
-        moveUpBtn.addEventListener('mouseup', () => this.keyManager.upReleased());
-        moveDownBtn.addEventListener('mousedown', () => this.keyManager.downPressed());
-        moveDownBtn.addEventListener('mouseup', () => this.keyManager.downReleased());
+        moveLeftBtn.addEventListener('touchstart', () => this.keyManager.leftPressed());
+        moveLeftBtn.addEventListener('touchend', () => this.keyManager.leftReleased());
+        moveRightBtn.addEventListener('touchstart', () => this.keyManager.rightPressed());
+        moveRightBtn.addEventListener('touchend', () => this.keyManager.rightReleased());
+        moveUpBtn.addEventListener('touchstart', () => this.keyManager.upPressed());
+        moveUpBtn.addEventListener('touchend', () => this.keyManager.upReleased());
+        moveDownBtn.addEventListener('touchstart', () => this.keyManager.downPressed());
+        moveDownBtn.addEventListener('touchend', () => this.keyManager.downReleased());
 
         window.addEventListener('keydown', this.keyDownActionHandler.bind(this));
         window.addEventListener('keyup', this.keyUpActionHandler.bind(this));
