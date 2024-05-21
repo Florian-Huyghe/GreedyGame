@@ -29,7 +29,7 @@ export default class Game {
         this.greedy = new Greedy(canvas.width/2, canvas.height/2);
         this.keyManager = new KeyManager();
         this.#fruits = [];
-        this.#cpt;
+        this.#cpt = 0;
 
         this.createHungry();
 
